@@ -4,7 +4,7 @@
      *
      * @package Uikitty
      * @author 刘铭熙
-     * @version 0.1-beta
+     * @version 1.0.0
      * @link https://blog.x-word.cn
      */
 
