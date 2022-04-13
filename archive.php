@@ -31,8 +31,14 @@
                         <?php $this->need('public/article.php'); ?>
                         <div id="navigation" class="uk-width-1-1@m uk-text-center uk-margin-top">
                             <div class="uk-card uk-card-default uk-border-rounded">
-                                <div class="uk-card-body pager">
-                                    <?php $this->pageLink('下一页','next'); ?>
+                                <div class="uk-card-body">
+                                    <div class="status">
+                                        <div class="loaders help"></div>
+                                        <div class="no-more" style="display: none">No more pages</div>
+                                    </div>
+                                    <div class="pager">
+                                        <?php $this->pageLink('下一页','next'); ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
