@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <?php if ($this->have()): ?>
-                    <div id="content" class="uk-grid-medium" uk-grid="">
+                    <div id="container" class="uk-grid-medium" uk-grid="">
                         <?php $this->need('public/article.php'); ?>
                         <div id="navigation" class="uk-width-1-1@m uk-text-center uk-margin-top">
                             <div class="uk-card uk-card-default uk-border-rounded">
