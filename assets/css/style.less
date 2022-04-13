@@ -1,0 +1,339 @@
+
+body{
+  transition: 0.3s ease-in-out;
+}
+
+/* 设置自定义背景[颜色/图片] */
+html::before {
+  background-image: url(http://p5.qhimg.com/bdm/2560_1600_100/t012387ebed588f2b55.jpg);
+  content: '';
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center 0;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 15px;
+}
+
+.uk-border-rounded {
+  border-radius: 15px;
+}
+
+.uk-border-img {
+  border-radius: 15px 15px 0 0;
+}
+
+
+
+.border-overlay {
+  border-radius: 0 0 15px 15px;
+}
+
+
+
+.uk-search-large .uk-search-input {
+  height: 80px;
+  background: 0 0;
+  font-size: 1.625rem;
+}
+
+.slide-caption {
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-right: 20px;
+  bottom: 40px;
+  z-index: 1;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+/*
+loading
+*/
+.loader-1 {
+  background: #363B40;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #47494b, #363B40);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #47494b, #363B40); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+.loader {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  transform: rotate(165deg);
+}
+
+.loader:before, .loader:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%);
+}
+
+.loader:before {
+  animation: before 2s infinite;
+}
+
+.loader:after {
+  animation: after 2s infinite;
+}
+
+@keyframes before {
+  0% {
+    width: 0.5em;
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+  35% {
+    width: 2.5em;
+    box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+  }
+  70% {
+    width: 0.5em;
+    box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+  100% {
+    box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+  }
+}
+
+@keyframes after {
+  0% {
+    height: 0.5em;
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+  35% {
+    height: 2.5em;
+    box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+  }
+  70% {
+    height: 0.5em;
+    box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+  }
+  100% {
+    box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+  }
+}
+
+/**
+ * Attempt to center the whole thing!
+ */
+.loader {
+  position: absolute;
+  top: calc(50% - 1.25em);
+  left: calc(50% - 1.25em);
+}
+/*# sourceMappingURL=loading.css.map */
+
+pre {
+  font: 0.875rem/1.5 Consolas, monaco, monospace;
+  color: #666;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid #22272e;
+  border-radius: 5px;
+  background: #22272e;
+}
+
+/*code换行*/
+:not(pre) > code, :not(pre) > kbd, :not(pre) > samp {
+  font-family: Consolas, monaco, monospace;
+  font-size: .875rem;
+  /*元素内的空白保留，并允许换行*/
+  white-space: pre-wrap !important;
+  /*是否允许在单词内断句*/
+  word-wrap: break-word !important;
+  /*强调怎么样断句*/
+  /*word-break: break-all !important;*/
+  padding: 2px 6px;
+  background: #f8f8f8;
+}
+
+/* for block of numbers */
+
+.uk-light{
+  transition: 1s ease-in-out;
+  .tm-navbar-container:not(.uk-navbar-transparent) {
+    background: #363B40;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(71, 73, 75, 0.9), rgba(54, 59, 64, 0.9));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(71, 73, 75, 0.9), rgba(54, 59, 64, 0.9)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.09) !important;
+  }
+
+  /*
+  搜索框
+   */
+  .uk-modal-dialog {
+    background: #363B40;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #47494b, #363B40);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #47494b, #363B40); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  /*
+   搜索框取消按钮
+    */
+  .uk-modal-close-full {
+    background: rgba(0,0,0, 0);  /* fallback for old browsers */
+
+  }
+  /*
+   侧边栏背景
+    */
+  .uk-offcanvas-bar {
+    background: #363B40;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #47494b, #363B40);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #47494b, #363B40); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  .uk-card-default {
+    background: #363B40;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #47494b, #363B40);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #47494b, #363B40); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: rgba(255, 255, 255, 0.8);
+
+    .uk-card-title {
+      color: rgba(255, 255, 255, 0.9);;
+    }
+  }
+
+  .uk-label {
+    background-color: rgba(35, 35, 35, 0.25);
+    color: #ffffff;
+  }
+
+
+
+  .uk-comment-primary {
+    border-radius: 15px;
+    padding: 30px;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  .darkmode-selector {
+
+  }
+}
+.uk-dark{
+  transition: 1s ease-in-out;
+  .tm-navbar-container:not(.uk-navbar-transparent) {
+    background: rgba(255, 255, 255, 0.9);  /* fallback for old browsers */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.09) !important;
+  }
+
+  /*
+  搜索框
+   */
+  .uk-modal-dialog {
+    background: rgba(255, 255, 255, 0.9);  /* fallback for old browsers */
+  }
+  /*
+   搜索框取消按钮
+    */
+  .uk-modal-close-full {
+    background: rgba(0,0,0, 0);  /* fallback for old browsers */
+
+  }
+
+
+  .uk-card-default {
+  background: #ffffff;
+    color: rgba(0, 0, 0, 0.8);
+
+    .uk-card-title {
+      color: rgba(0, 0, 0, 0.9);;
+    }
+  }
+
+  .uk-label {
+    background: #FFAFBD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #ffffff;
+  }
+
+
+
+  .uk-comment-primary {
+    border-radius: 15px;
+    padding: 30px;
+    background: #f3f3f3;  /* fallback for old browsers */
+
+  }
+  .uk-button-default{
+    border: 1px solid #999999;
+  }
+}
+.uk-button-default {
+  border-radius: 25px;
+}
+/*help*/
+.help {
+  width: 30px;
+  height: 30px;
+  border: 1px #fff solid;
+  border-radius: 50%;
+  -webkit-animation: rotation 1s ease-in-out infinite;
+  -moz-animation: rotation 1s ease-in-out infinite;
+  animation: rotation 1s ease-in-out infinite;
+  text-align: center;
+  position: absolute;
+  top: calc(50% - 1.25em);
+  left: calc(50% - 1.25em);
+}
+
+.help:after{
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255,255,255,1);
+  border-radius: 100%;
+  position: absolute;
+  content: "";
+}
+@-webkit-keyframes rotation{
+  0%{-webkit-transform: rotate(0deg);}
+  100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotation{
+  0%{-moz-transform: rotate(0deg);}
+  100%{-moz-transform: rotate(360deg);}
+}
+@keyframes rotation{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
