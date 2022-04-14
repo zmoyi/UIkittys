@@ -10,8 +10,7 @@
                         <p class="uk-article-meta">
                             <?php echo core::getSemanticDate($this->created); ?> ·
                             <a href="<?php $this->author->permalink(); ?>"
-                                    rel="author"><?php $this->author(); ?></a> ·
-                            <?php echo core::getPostView($this); ?>次阅读
+                                    rel="author"><?php $this->author(); ?></a>
                         </p>
                     </header>
                     <div>
@@ -20,7 +19,7 @@
                                  class="uk-border-rounded" data-uk-img>
                         <?php endif; ?>
                     </div>
-                    <p><?php $this->excerpt(200, '...'); ?></p>
+                    <p><?php $this->excerpt(100, '...'); ?></p>
                     <a href="<?php $this->permalink() ?>" title="Read More"
                        class="uk-button uk-button-default uk-button-small">阅读更多</a>
 

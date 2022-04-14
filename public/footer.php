@@ -72,6 +72,6 @@
 <script src="<?php $this->options->themeUrl('assets/uikit/js/uikit.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assets/uikit/js/uikit-icons.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('assets/js/dist/index.js'); ?>"></script>
-
+<?php $this->footer(); ?>
 </body>
 </html>

@@ -126,7 +126,7 @@
                                 <small class="uk-margin-remove-top">分类</small>
                             </div>
                         </div>
-                        <small>Copyright ©   ©
+                        <small>Copyright ©
                             <script>
                                 document.currentScript.insertAdjacentHTML('afterend', '<time datetime="' + new Date().toJSON() + '">' + new Intl.DateTimeFormat(document.documentElement.lang, {year: 'numeric'}).format() + '</time>');
                             </script>

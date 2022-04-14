@@ -164,6 +164,7 @@ pre {
 /* for block of numbers */
 .uk-light {
   transition: 1s ease-in-out;
+  --myColor: #ffffff;
   /*
   搜索框
    */
@@ -231,6 +232,7 @@ pre {
 }
 .uk-dark {
   transition: 1s ease-in-out;
+  --myColor: #000000;
   /*
   搜索框
    */
@@ -283,7 +285,7 @@ pre {
 .help {
   width: 30px;
   height: 30px;
-  border: 1px #fff solid;
+  border: 1px var(--myColor) solid;
   border-radius: 50%;
   -webkit-animation: rotation 1s ease-in-out infinite;
   -moz-animation: rotation 1s ease-in-out infinite;
@@ -296,7 +298,7 @@ pre {
 .help:after {
   width: 5px;
   height: 5px;
-  background-color: #ffffff;
+  background-color: var(--myColor);
   border-radius: 100%;
   position: absolute;
   content: "";
@@ -324,5 +326,218 @@ pre {
   100% {
     transform: rotate(360deg);
   }
+}
+.ghost {
+  position: relative;
+  height: 200px;
+  width: 160px;
+}
+.ghost .body {
+  position: relative;
+  width: 160px;
+  height: 200px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  background: #f2fefa;
+  box-shadow: inset -3px 4px 0 rgba(0, 0, 0, 0.3);
+  animation: float 4s ease infinite;
+}
+.ghost .face {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 67px;
+  left: 37px;
+  width: 72px;
+  height: 60px;
+}
+.ghost .eye {
+  width: 20px;
+  height: 30px;
+  border-radius: 30px;
+  background: #272b24;
+  box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.ghost .eye.left {
+  margin-right: 32px;
+}
+.ghost .mouth {
+  margin-top: 6px;
+  width: 32px;
+  height: 16px;
+  margin-left: 20px;
+  border-radius: 4px 4px 16px 12px;
+  background: #272b24;
+  box-shadow: 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.ghost .rosy {
+  position: absolute;
+  top: 27px;
+  width: 22px;
+  height: 8px;
+  border-radius: 100%;
+  background: #ffaa9e;
+}
+.ghost .rosy.left {
+  left: -6px;
+  transform: rotate(-8deg);
+}
+.ghost .rosy.right {
+  right: -6px;
+  transform: rotate(-8deg);
+}
+.ghost .arm {
+  position: absolute;
+  top: 136px;
+  width: 60px;
+  height: 40px;
+  background: #f2fefa;
+}
+.ghost .arm.left {
+  left: -4px;
+  border-radius: 60% 100%;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  animation: arms-left 4s ease infinite;
+}
+.ghost .arm.right {
+  right: -65px;
+  border-radius: 100% 60%;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  animation: arms-right 4s ease infinite;
+}
+.ghost .bottom {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: -1px;
+}
+.ghost .bottom div {
+  flex: 1;
+  position: relative;
+  top: -12px;
+  height: 28px;
+  border-radius: 100%;
+  background-color: #f2fefa;
+}
+.ghost .bottom div:nth-child(2n) {
+  top: -10px;
+  margin: 0 -2px;
+  border-top: 10px solid #f2fefa;
+  background: transparent;
+}
+.ghost .shadow {
+  position: absolute;
+  bottom: -100px;
+  left: 40%;
+  width: 200px;
+  height: 12px;
+  border-radius: 100%;
+  background: #191d18;
+  animation: shadow 4s ease infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    top: 0;
+  }
+  40% {
+    top: -40px;
+  }
+}
+@keyframes arms-left {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(50deg);
+  }
+  40% {
+    transform: translate(-50%, -50%) rotate(40deg);
+  }
+}
+@keyframes arms-right {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(-50deg);
+  }
+  40% {
+    transform: translate(-50%, -50%) rotate(-40deg);
+  }
+}
+@keyframes shadow {
+  0%,
+  100% {
+    transform: translateX(-45%) scale(1);
+  }
+  40% {
+    transform: translateX(-45%) scale(0.5);
+  }
+}
+.to404 {
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.uk-logo {
+  width: 160px;
+  height: 40px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.list-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+.list-item:hover .item-image::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.item-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translateZ(-50px) scale(2.4);
+}
+.item-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item-image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+}
+.item-text {
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+.text-title {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.text-desc {
+  font-size: 1.2rem;
+}
+.imgs {
+  perspective: 100px;
+  transform-style: preserve-3d;
+  overflow-y: auto;
 }
 /*# sourceMappingURL=style.css.map */
